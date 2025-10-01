@@ -1,0 +1,59 @@
+<div class="home-wrapper">
+  <!-- Cards de servicios (ahora arriba) -->
+  <section class="cards cards-neon">
+    <p-card *ngFor="let s of services" class="card-neon">
+      <ng-template pCardHeader>
+        <p-image [src]="s.img" alt="service" width="100%"></p-image>
+      </ng-template>
+      <ng-template pCardTitle>
+        {{s.title}}
+      </ng-template>
+      <ng-template pCardContent>
+        <p>{{s.desc}}</p>
+      </ng-template>
+      <ng-template pCardFooter>
+        <button pButton label="Conocer más +" (click)="onSearch()"></button>
+      </ng-template>
+    </p-card>
+  </section>
+
+  <!-- Menú superior -->
+  <p-menubar [model]="menuItems">
+    <ng-template pTemplate="start">
+      <p-image src="assets/logo.png" alt="Logo empresa" width="100"></p-image>
+    </ng-template>
+  </p-menubar>
+
+  <!-- Sección principal -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Soluciones de Software Innovadoras</h1>
+      <div class="search">
+        <label class="p-float-label">
+          <input id="search" pInputText [(ngModel)]="searchText"/>
+          <span>Buscar servicios</span>
+        </label>
+        <button pButton type="button" label="Buscar" (click)="onSearch()"></button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <p-image src="assets/hero.png" alt="Hero" width="400"></p-image>
+    </div>
+  </section>
+
+
+  <!-- Accordion -->
+  <section class="accordion">
+    <p-accordion>
+      <p-accordionTab *ngFor="let s of services" [header]="s.title">
+        {{s.desc}}
+      </p-accordionTab>
+    </p-accordion>
+  </section>
+
+  <!-- Footer -->
+  <footer class="app-footer">
+    Diseñado por: Yovanny Quiroz - 223034171
+  </footer>
+
+</div>

@@ -1,0 +1,16 @@
+.home-wrapper{ padding:1rem; }
+.hero{ display:flex; justify-content:center; margin:1.5rem 0; }
+.hero-inner{ display:flex; gap:2rem; align-items:center; }
+.search{ display:flex; flex-direction:column; gap:0.5rem; }
+.cards{ display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1rem; }
+.cards-neon {
+	margin-bottom: 2rem;
+}
+.card-neon {
+	box-shadow: 0 0 16px 4px #00f6ff, 0 0 2px 1px #00f6ff inset;
+	border: 2px solid #00f6ff;
+	border-radius: 16px;
+	background: #101522;
+	color: #fff;
+}
+.accordion{ max-width:900px; margin:2rem auto; }
