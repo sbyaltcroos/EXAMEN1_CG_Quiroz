@@ -1,0 +1,59 @@
+/* Paleta: Oscuro + Gris + Neon Azul */
+:root {
+  --primary: #1e88e5;   /* azul neón */
+  --accent: #e0e0e0;    /* gris claro */
+  --bg: #121212;        /* fondo oscuro */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--accent);
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+button, .p-button {
+  background: var(--primary) !important;
+  border: none !important;
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+button:hover, .p-button:hover {
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.p-menubar {
+  background: #1c1c1c !important;
+  border: none !important;
+}
+
+.p-menubar a {
+  color: var(--accent) !important;
+}
+
+.cards .p-card {
+  background: #1c1c1c;
+  color: var(--accent);
+  box-shadow: 0 0 8px rgba(30, 136, 229, 0.6);
+  border-radius: 10px;
+}
+
+.accordion .p-accordion {
+  background: #1c1c1c;
+  border-radius: 10px;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+  color: var(--primary);
+}

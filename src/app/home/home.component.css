@@ -1,0 +1,39 @@
+.home-wrapper {
+  padding: 1rem;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+  background: #1c1c1c;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(30, 136, 229, 0.7);
+}
+
+.hero-inner {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  color: var(--accent);
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.accordion {
+  max-width: 900px;
+  margin: 2rem auto;
+}

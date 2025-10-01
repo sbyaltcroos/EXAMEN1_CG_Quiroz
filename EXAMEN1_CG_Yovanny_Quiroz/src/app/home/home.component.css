@@ -1,6 +1,0 @@
-.home-wrapper{ padding:1rem; }
-.hero{ display:flex; justify-content:center; margin:1.5rem 0; }
-.hero-inner{ display:flex; gap:2rem; align-items:center; }
-.search{ display:flex; flex-direction:column; gap:0.5rem; }
-.cards{ display:flex; flex-wrap:wrap; justify-content:center; gap:1rem; margin-top:1rem; }
-.accordion{ max-width:900px; margin:2rem auto; }

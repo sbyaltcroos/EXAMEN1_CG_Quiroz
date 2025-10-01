@@ -1,0 +1,61 @@
+<div class="home-wrapper">
+
+  <!-- 🔹 NAVBAR -->
+  <p-menubar [model]="menuItems">
+    <ng-template pTemplate="start">
+      <p-image src="assets/logo.png" alt="logo" width="80"></p-image>
+    </ng-template>
+  </p-menubar>
+
+  <!-- 🔹 HERO con buscador -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="search">
+        <label class="p-float-label">
+          <input id="search" pInputText [(ngModel)]="searchText"/>
+          <span>Buscar servicios</span>
+        </label>
+        <button pButton type="button" label="Buscar" (click)="onSearch()"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 SECCIÓN DE CARDS -->
+  <section id="servicios" class="cards">
+    <div class="cards-container">
+      <p-card *ngFor="let s of services" [style]="{'width':'300px','margin':'1rem'}">
+        <ng-template pCardHeader>
+          <p-image [src]="s.img" alt="service" width="100%"></p-image>
+        </ng-template>
+        <ng-template pCardTitle>
+          {{s.title}}
+        </ng-template>
+        <ng-template pCardContent>
+          <p>{{s.desc}}</p>
+        </ng-template>
+        <ng-template pCardFooter>
+          <button pButton label="Conocer mas +" [routerLink]="['/details']"></button>
+        </ng-template>
+      </p-card>
+    </div>
+  </section>
+
+  <!-- 🔹 SECCIÓN DE ACORDEÓN -->
+  <section class="accordion">
+    <p-accordion>
+      <p-accordionTab *ngFor="let s of services" [header]="s.title">
+        {{s.desc}}
+      </p-accordionTab>
+    </p-accordion>
+  </section>
+
+  <!-- 🔹 HERO IMAGE AL FINAL -->
+  <section class="hero-image-final">
+     <p-image src="assets/hero.png" alt="hero" width="300" style="max-height:180px;"></p-image>
+  </section>
+
+  <!-- 🔹 FOOTER -->
+  <footer class="app-footer">
+    Diseñado por: Yovanny Quiroz - 23034171
+  </footer>
+</div>
